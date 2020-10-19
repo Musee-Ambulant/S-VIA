@@ -35,7 +35,7 @@ Once your Rpi has booted, you will be greated with the installation welcome scre
 
 ### Open a terminal window
 Insert the following commands:
-'''
+```
 sudo apt update
 sudo apt-get upgrade
-'''
+```
