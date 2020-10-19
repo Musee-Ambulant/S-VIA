@@ -89,6 +89,16 @@ sudo apt-get install libssl-dev libdbus-1-dev libglib2.0-dev libxkbcommon-dev li
 sudo apt-get install libasound2-dev libpulse-dev gstreamer1.0-omx libgstreamer1.0-dev libstreamer-plugins-base1.0-dev gstreamer1.0-alsa
 
 sudo apt-get install libvpx-dev libsrtp0-dev libsnappy-dev libnss3-dev
+
+sudo apt-get install "^libxcb.*"
+
+sudo apt-get install libfreetype6-dev libicu-dev libsqlite3-dev libxslt1-dev libavcodec-dev libavformat-dev libswscale-dev
+
+sudo apt-get install libgstreamer0.10-dev gstreamer-tools libraspberrypi-dev libx11-dev libglib2.0-dev
+
+sudo apt-get install freetds-dev libsqlite0-dev libpq-dev libiodbc2-dev firebird-dev libjpeg9-dev libgst-dev libext-dev libxcb1 libxcb1-dev libx11-xcb1
+
+sudo apt-get install
 ```
 
 
