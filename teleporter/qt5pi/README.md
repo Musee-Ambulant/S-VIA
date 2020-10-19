@@ -13,7 +13,7 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
   <li>Laptop connected the same network as your rpi 4B (PC, MAC or Linux)</li>
 </ul>
 
-<h2>Installation</h2>
+<h2>Installation overview</h2>
 
 <ul>
   <li>Prepare Raspberry Pi for compilation</li>
@@ -22,7 +22,7 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
 </ul>
 
 
-<h3>Prepare Raspberry pi 4</h3>
+<h3>Raspberry Pi OS</h3>
 <ul>
   <li>Download Raspberry Pi Imager : https://www.raspberrypi.org/downloads/, select imager based on your operating system</li>
   <li>Install software</li>
