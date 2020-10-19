@@ -34,13 +34,33 @@ Once your Rpi has booted, you will be greated with the installation welcome scre
 
 
 ### Open a terminal window
-Insert the following commands:
+Open sources.list and uncomment the last line. 
+
+Uncomment the following :
+#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
+
+to it looks like :
+deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
+```
+sudo nano /etc/apt/sources.list
+```
+Exit and save
+```
+CTRL + x
+y
+Enter
+````
+
+Run :
 ```
 sudo apt update
-sudo apt-get upgrade
+sudo apt full-upgrade
+sudo reboot
 ```
-
-
+ After reboot, open terminal and run firmware update.
+ ```
+ sudo rpi-update
+```
 
 
 
