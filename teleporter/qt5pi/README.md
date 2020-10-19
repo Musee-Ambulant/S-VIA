@@ -14,9 +14,9 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
 
 ## Installation overview
 
-- Prepare Raspberry Pi for compilation
-- Setup Ubuntu 20.04 virtual machine and prepare for compilation
-- Install QtCreator and deploy compiled example
+1. Prepare Raspberry Pi for compilation
+2. Setup Ubuntu 20.04 virtual machine and prepare for compilation
+3. Install QtCreator and deploy compiled example
 
 ### Write Raspberry Pi OS to SD card
 - Download Raspberry Pi Imager : https://www.raspberrypi.org/downloads/, select imager based on your operating system
@@ -29,7 +29,7 @@ Once your Rpi has booted, you will be greated with the installation welcome scre
 - Click on next
 - Set Country, language, timezone.  Click Next.
 - Set your password
-- Connect to your wifi network.  HOWEVER IT<S RECOMMENDED TO CONNECT VIA A WIRED CONNECTION.
+- Connect to your wifi network.  **HOWEVER IT<S RECOMMENDED TO CONNECT VIA A WIRED CONNECTION.**
 - Skip the following steps without updating, we will do this in the following steps.
 
 
