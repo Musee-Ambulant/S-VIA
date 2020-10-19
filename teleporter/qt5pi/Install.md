@@ -1,9 +1,9 @@
 # Create custom interface for Raspberry pi 4 model B with Qt5
 
-#### Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14.2 cross compilation for Raspberry Pi 4 model B - Run Qt on Raspberry" by [ Ulas Dikme ](https://www.youtube.com/channel/UCM93TMYG5-WE7tQ1UT-EJKw) : https://youtu.be/TmtN3Rmx9Rk
+#### Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14.2 cross compilation for Raspberry Pi 4 model B - Run Qt on Raspberry" by [ Ulas Dikme ](https://www.youtube.com/channel/UCM93TMYG5-WE7tQ1UT-EJKw): https://youtu.be/TmtN3Rmx9Rk. I recommend watching the video while going through the following installation steps to better understand what is actually going on 😜.
 
 
-## Prerequisites
+### Prerequisites
 
 - [x] Raspberry pi 4 model B (Rpi 4B)
 - [x] Minimum 16 Gb micro SD card
@@ -12,11 +12,13 @@
 - [x] Raspberry pi IP number reserved via your router dashboard
 - [x] Laptop connected the same network as your rpi 4B (PC, MAC or Linux)
 
-## Installation overview
+### Installation overview
 
 1. Prepare Raspberry Pi for compilation
-2. Setup Ubuntu 20.04 virtual machine and prepare for compilation
+2. Setup Ubuntu 20.04 LTS virtual machine and prepare for compilation
 3. Install QtCreator and deploy compiled example
+
+## PART 1 - Prepare Raspberry Pi for compilation
 
 ### Write Raspberry Pi OS to SD card
 - Download Raspberry Pi Imager : https://www.raspberrypi.org/downloads/, select imager based on your operating system
@@ -98,8 +100,36 @@ sudo apt-get install libgstreamer0.10-dev gstreamer-tools libraspberrypi-dev lib
 
 sudo apt-get install freetds-dev libsqlite0-dev libpq-dev libiodbc2-dev firebird-dev libjpeg9-dev libgst-dev libext-dev libxcb1 libxcb1-dev libx11-xcb1
 
-sudo apt-get install
+sudo apt-get install libxcb-sync1 libxcb-sync-dev libxcb-render-util0 libxcb-render-util0-dev libxcb-xfixes0-dev libxrender-dev libxcb-shape0-dev libxcb-randr0-dev
+
+sudo apt-get install libxcb-glx0-dev libxi-dev libdrm-dev libssl-dev libxcb-xinerama0 libxcb-xinerama0-dev
+
+sudo apt-get install libatspi-dev libssl-dev libxcursor-dev libxcomposite-dev lib-xdamage-dev libfontconfig1-dev
+
+sudo apt-get install libxss-dev libxtst-dev libpci-dev libcap-dev libsrtp0-dev libxrandr-dev libnss3-dev libdirectfb-dev libaudio-dev
+
+sudo apt-get install 
 ```
+
+Create the following file and change the permissions
+```
+sudo mkdir /usr/local/qt5pi
+sudo chown pi:pi /usr/local/qt5pi/
+```
+
+## PART 2 - Setup Ubuntu 20.04 LTS virtual machine and prepare for compilation
+
+### VirtualBox installation
+
+Go to your host computer, download and install VirtualBox from the following link:
+https://www.virtualbox.org/wiki/Downloads 
+
+### Setup Ubuntu 20.04 LTS
+Download ths Ubuntu 20.04 image file here: https://ubuntu.com/download/desktop/thank-you?version=20.04.1&architecture=amd64
+
+
+
+
 
 
 
