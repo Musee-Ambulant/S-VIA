@@ -22,7 +22,7 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
 </ul>
 
 
-<h3>Raspberry Pi OS</h3>
+<h3>Write Raspberry Pi OS to SD card</h3>
 <ul>
   <li>Download Raspberry Pi Imager : https://www.raspberrypi.org/downloads/, select imager based on your operating system</li>
   <li>Install software</li>
@@ -30,8 +30,20 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
   <li>Insert SD card into the rpi and boot Rpi</li>
 </ul>
 
-<h3>Basic Setup</h3>
+<h3>Basic Rpi setup</h3>
 
+<p>Once your Rpi has booted, you will be greated with the installation welcome screen.  Go through the following steps :
+<ul>
+  <li>Click on next</li>
+  <li>Set Country, language, timezone.  Click Next.</li>
+  <li>Set your password</li>
+  <li>Connect to your wifi network.  HOWEVER IT<S RECOMMENDED TO CONNECT VIA A WIRED CONNECTION.</li>
+  <li>Skip the following steps without updating, we will do this in the following steps.</li>
+</ul>
+
+<h3>Open a terminal window</h3>
+<p> Insert the following commands :</p>
 <pre><code>sudo apt update
-sudo apt-get upgrade</code></pre>
+sudo apt-get upgrade
+</code></pre>
 
