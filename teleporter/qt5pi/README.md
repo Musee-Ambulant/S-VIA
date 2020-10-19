@@ -45,5 +45,5 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
 <p> Insert the following commands :</p>
 <pre><code>sudo apt update
 sudo apt-get upgrade
-</code></pre>
+</code></pre> 
 
