@@ -127,6 +127,16 @@ https://www.virtualbox.org/wiki/Downloads
 ### Setup Ubuntu 20.04 LTS
 Download ths Ubuntu 20.04 image file here: https://ubuntu.com/download/desktop/thank-you?version=20.04.1&architecture=amd64
 
+I recommend watching **Ulas Dikme**'s video (https://youtu.be/TmtN3Rmx9Rk?t=873) **from minute 14:30 to minute 17:53** for complete instructions on setting up a Ubuntu 20.04 LTS VM on your computer.
+
+Once your Ubuntu 20.04 LTS virtual machine is up and runing open a terminal window and continue with the following instructions.
+
+Update your system
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo reboot
+```
 
 
 
