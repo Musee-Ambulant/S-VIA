@@ -30,8 +30,8 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
   <li>Insert SD card into the rpi and boot Rpi</li>
 </ul>
 
-<h3></h3>
-<h6>Update the Raspberry pi via the terminal</h6>
+<h3>Basic Setup</h3>
+
 <pre><code>sudo apt update
 sudo apt-get upgrade</code></pre>
 
