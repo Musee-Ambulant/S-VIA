@@ -51,16 +51,33 @@ y
 Enter
 ````
 
-Run :
+Update tour system.  When prompted hit ```y```
 ```
 sudo apt update
 sudo apt full-upgrade
 sudo reboot
 ```
- After reboot, open terminal and run firmware update.
+ After reboot, open terminal and run firmware update. 
  ```
  sudo rpi-update
 ```
+
+Click on the Raspberry Pi start menu > Preferences > Raspberry Pi Configuration
+
+![](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2015/09/raspberry_pi_configuration.png)
+
+Go to the INTERFACES tab and make sure the following options are set to **ENABLED** :
+- [x] SSH
+- [x] SPI
+
+Reboot pi from terminal
+```
+sudo reboot
+```
+
+Open terminal and install the following packages
+
+
 
 
 
