@@ -1,4 +1,4 @@
-# Create custom interface for Raspberry pi 4 with qt5 creator
+# Create custom interface for Raspberry pi 4 model B with Qt5
 
 #### Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14.2 cross compilation for Raspberry Pi 4 model B - Run Qt on Raspberry" by [ Ulas Dikme ](https://www.youtube.com/channel/UCM93TMYG5-WE7tQ1UT-EJKw) : https://youtu.be/TmtN3Rmx9Rk
 
