@@ -55,7 +55,7 @@ sudo apt-get upgrade
 ```
 sudo nano /boot/cmdline.txt
 ```
-**Add this to the end of the line.***  Make sure it's all on one line or else you will break your Rpi boot sequence.
+**Add this to the end of the line.**  Make sure it's all on one line or else you will break your Rpi boot sequence.
 ```
 consoleblank=1 logo.nologo quiet loglevel=0 plymouth.enable=0 vt.global_cursor_default=0 plymouth.ignore-serial-consoles splash fastboot noatime nodiratime noram
 ```
