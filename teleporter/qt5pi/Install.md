@@ -75,9 +75,17 @@ Reboot pi from terminal
 sudo reboot
 ```
 
-Open terminal and install the following packages
+Open terminal and install the following packages and dependencies.  Make sure all files download and install properly.  If you get an error message, run the command again.
+```
+sudo apt-get install build-essential
+sudo apt-get build-dep qt5-qmake
+sudo apt-get build-dep libqt5webengin-data
+```
+```
+sudo apt-get install libboost1.58-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libkpeg-dev libfontconfig1-dev
 
-
+sudo
+```
 
 
 
