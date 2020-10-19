@@ -38,7 +38,6 @@ Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14
   <li>Set Country, language, timezone.  Click Next.</li>
   <li>Set your password</li>
   <li>Connect to your wifi network.  HOWEVER IT<S RECOMMENDED TO CONNECT VIA A WIRED CONNECTION.</li>
-  <li>Skip the following steps without updating, we will do this in the following steps.</li>
 </ul>
 
 <h3>Open a terminal window</h3>
