@@ -82,9 +82,13 @@ sudo apt-get build-dep qt5-qmake
 sudo apt-get build-dep libqt5webengin-data
 ```
 ```
-sudo apt-get install libboost1.58-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libkpeg-dev libfontconfig1-dev
+sudo apt-get install libboost1.58-all-dev libudev-dev libinput-dev libts-dev libmtdev-dev libjpeg-dev libfontconfig1-dev
 
-sudo
+sudo apt-get install libssl-dev libdbus-1-dev libglib2.0-dev libxkbcommon-dev libegl1-mesa-dev libgbm-dev libgles2-mesa-dev mesa-common-dev
+
+sudo apt-get install libasound2-dev libpulse-dev gstreamer1.0-omx libgstreamer1.0-dev libstreamer-plugins-base1.0-dev gstreamer1.0-alsa
+
+sudo apt-get install libvpx-dev libsrtp0-dev libsnappy-dev libnss3-dev
 ```
 
 
