@@ -29,7 +29,7 @@ Once your Rpi has booted, you will be greated with the installation welcome scre
 - Click on next
 - Set Country, language, timezone.  Click Next.
 - Set your password
-- Connect to your wifi network.  **HOWEVER IT<S RECOMMENDED TO CONNECT VIA A WIRED CONNECTION.**
+- Connect to your wifi network.  **HOWEVER IT'S RECOMMENDED TO CONNECT WITH A WIRED CONNECTION.**
 - Skip the following steps without updating, we will do this in the following steps.
 
 
@@ -38,4 +38,24 @@ Insert the following commands:
 ```
 sudo apt update
 sudo apt-get upgrade
+```
+
+
+
+
+
+
+
+
+
+
+# Other Rpi configurations to make your GUI look more professional
+
+## Make screen black on boot
+```
+sudo nano /boot/cmdline.txt
+```
+**Add this to the end of the line.***  Make sure it's all on one line or else you will break your Rpi boot sequence.
+```
+consoleblank=1 logo.nologo quiet loglevel=0 plymouth.enable=0 vt.global_cursor_default=0 plymouth.ignore-serial-consoles splash fastboot noatime nodiratime noram
 ```
