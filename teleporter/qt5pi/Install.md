@@ -154,13 +154,27 @@ mkdir /opt/qt5pi/
 chown aaron:aaron /opt/qt5pi
 cd /opt/qt5pi/
 ```
-
 Download, open and install toolchain from linaro
 ```
 wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 
 tar xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 ```
+Export to PATH
+```
+export PATH=$PATH:/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
+```
+Open *bashrc*
+```
+nano ~/.bashrc
+``` 
+Add the export line to the end of the file. Exit ```crtl + x``` and Save ```y```
+```
+export PATH=$PATH:/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
+```
+Download, open and install qt5.14
+```
+wget https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz
 
 
 
