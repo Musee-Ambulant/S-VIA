@@ -137,7 +137,7 @@ sudo apt-get upgrade
 sudo reboot
 ```
 
-Once Ubuntu has rebooted, open a terminal window and ping your Raspberry pi.  You will need to change the following ip address for your ip address.
+Once Ubuntu has rebooted, open a terminal window and ping your Raspberry pi.  You will need to change the following ip address *10.0.4.83* for your ip address.
 ```
 ping 10.0.4.83 -c 5
 ```
@@ -178,7 +178,7 @@ wget https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywher
 
 tar xf qt-everywhere-src-5.14.2.tar.xz
 ```
-Rsync the files from the Rpi to the host machine for cross compilation.  Change ip and Rpi user accordingly.
+Rsync the files from the Rpi to the host machine for cross compilation.  Change ip (*10.0.4.83*) and Rpi user (*pi*) accordingly.
 ```
 rsync -avz pi@10.0.4.83:/lib sysroot
 rsync -avz pi@10.0.4.83:/usr/include sysroot/usr
@@ -194,7 +194,7 @@ mv sysroot/usr/lib/arm-linux-gnueabihf/libEGLSv2.so.2.1.0 sysroot/usr/lib/arm-li
 Create the following softlinks
 ```
 
-
+```
 
 
 
