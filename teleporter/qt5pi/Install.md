@@ -79,7 +79,6 @@ sudo reboot
 
 Open terminal and install the following packages and dependencies.  Make sure all files download and install properly.  If you get an error message, run the command again.
 ```
-sudo apt-get install build-essential
 sudo apt-get build-dep qt5-qmake
 sudo apt-get build-dep libqt5webengin-data
 ```
@@ -136,6 +135,19 @@ Update your system
 sudo apt-get update
 sudo apt-get upgrade
 sudo reboot
+```
+
+Once Ubuntu has rebooted, open a terminal window and ping your Raspberry pi.  You will need to change the following ip address for your ip address.
+```
+ping 10.0.4.83 -c 5
+```
+If you can successfully ping you Rpi, connect as root user in ubuntu terminal. 
+```
+sudo bash
+```
+apt-get install build-essential
+apt-get install gcc git bison python gperf pkg-config
+apt install libclang-dev
 ```
 
 
