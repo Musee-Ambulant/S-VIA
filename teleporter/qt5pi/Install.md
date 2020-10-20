@@ -229,9 +229,13 @@ Copy the following directory recursively to the ( *qt5build* ) directory
 ```
 cp -r /opt/qt5pi/qt-everywhere-src-5.14.2/ /opt/qt5pi/qt5build/
 ```
-Run the following
+Run the following configurations and commands.  The ( *make -j8* ) command will take at least an hour to run, all depending on the ressources you allocated to your virtual machine. 
 ```
 ../qt-everywhere-src-5.14.2/configure -opengl es2 -device linux-rasp-pi4-v3d-g++ -device-option CROSS_COMPILE=/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -sysroot /opt/qt5pi/sysroot -prefix /usr/local/qt5pi -opensource -confirm-license -skip qtscript -skip qtwayland -skip qtdatavis3d -nomake examples -make libs -pkg-config -no-use-gold-linker -v
+
+make -j8
+make install
+```
 
 
 # Other Rpi configurations to make your GUI look more professional
