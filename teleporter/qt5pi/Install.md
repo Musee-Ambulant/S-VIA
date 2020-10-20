@@ -154,7 +154,7 @@ mkdir /opt/qt5pi/
 chown aaron:aaron /opt/qt5pi
 cd /opt/qt5pi/
 ```
-Download, open and install toolchain from linaro
+Download and open toolchain from linaro
 ```
 wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 
@@ -172,13 +172,27 @@ Add the export line to the end of the file. Exit ```crtl + x``` and Save ```y```
 ```
 export PATH=$PATH:/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
 ```
-Download, open and install qt5.14
+Download and open qt5.14
 ```
 wget https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz
 
+tar xf qt-everywhere-src-5.14.2.tar.xz
+```
+Rsync the files from the Rpi to the host machine for cross compilation.  Change ip and Rpi user accordingly.
+```
+rsync -avz pi@10.0.4.83:/lib sysroot
+rsync -avz pi@10.0.4.83:/usr/include sysroot/usr
+rsync -avz pi@10.0.4.83:/usr/lib sysroot/usr
+rsync -avz pi@10.0.4.83:/opt/vc sysroot/opt
+```
+Move the following files to keep as a backups
+```
+mv sysroot/usr/lib/arm-linux-gnueabihf/libEGL.so.1.1.0 sysroot/usr/lib/arm-linux-gnueabihf/libEGL.so.1.1.0_backup
 
-
-
+mv sysroot/usr/lib/arm-linux-gnueabihf/libEGLSv2.so.2.1.0 sysroot/usr/lib/arm-linux-gnueabihf/libEGLSv2.so.2.1.0_backup
+```
+Create the following softlinks
+```
 
 
 
