@@ -27,21 +27,21 @@
 - Insert SD card into the rpi and boot Rpi
 
 ### Basic Rpi setup
-Once your Rpi has booted, you will be greated with the installation welcome screen.  Go through the following steps :
+Once your Rpi has booted, you will be greated with the installation welcome screen.  Go through the following steps:
 - Click on next
 - Set Country, language, timezone.  Click Next.
 - Set your password
 - Connect to your wifi network.  **HOWEVER IT'S RECOMMENDED TO CONNECT WITH A WIRED CONNECTION.**
-- Skip the following steps without updating, we will do this in the following steps.
+- Skip the following steps without updating, we will do this in the following steps
 
 
 ### Open a terminal window
-Open sources.list and uncomment the last line. 
+Open sources.list and uncomment the last line
 
-Uncomment the following :
+Uncomment the following:
 #deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
 
-to it looks like :
+to it looks like:
 deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
 ```
 sudo nano /etc/apt/sources.list
@@ -59,7 +59,7 @@ sudo apt update
 sudo apt full-upgrade
 sudo reboot
 ```
- After reboot, open terminal and run firmware update. 
+ After reboot, open terminal and run firmware update 
  ```
  sudo rpi-update
 ```
@@ -68,7 +68,7 @@ Click on the Raspberry Pi start menu > Preferences > Raspberry Pi Configuration
 
 ![](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2015/09/raspberry_pi_configuration.png)
 
-Go to the INTERFACES tab and make sure the following options are set to **ENABLED** :
+Go to the INTERFACES tab and make sure the following options are set to **ENABLED**:
 - [x] SSH
 - [x] SPI
 
@@ -201,9 +201,37 @@ ln -s sysroot/opt/vc/lib/libEGL.so sysroot/opt/vc/lib/libEGL.so.1
 
 ln -s sysroot/opt/vc/lib/libEGLSv2.so sysroot/opt/vc/lib/libEGLSv2.so.2
 ```
+Install, change permissions and run the following Python script
+```
+wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-relativelinks.py
 
+chmod +x sysroot-relativelinks.py
 
-
+./sysroot-relativelinks.py sysroot
+```
+Run the rsync commands again
+```
+rsync -avz pi@10.0.4.83:/lib sysroot
+rsync -avz pi@10.0.4.83:/usr/include sysroot/usr
+rsync -avz pi@10.0.4.83:/usr/lib sysroot/usr
+rsync -avz pi@10.0.4.83:/opt/vc sysroot/opt
+```
+Run the Python script again
+```
+./sysroot-relativelinks.py sysroot
+```
+Create the following directory in the ( */opt/qt5pi/* ) directory which you should still be in.  Go to the new directory.
+```
+mkdir qt5build
+cd qt5build/
+```
+Copy the following directory recursively to the ( *qt5build* ) directory
+```
+cp -r /opt/qt5pi/qt-everywhere-src-5.14.2/ /opt/qt5pi/qt5build/
+```
+Run the following
+```
+../qt-everywhere-src-5.14.2/configure -opengl es2 -device linux-rasp-pi4-v3d-g++ -device-option CROSS_COMPILE=/opt/qt5pi/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -sysroot /opt/qt5pi/sysroot -prefix /usr/local/qt5pi -opensource -confirm-license -skip qtscript -skip qtwayland -skip qtdatavis3d -nomake examples -make libs -pkg-config -no-use-gold-linker -v
 
 
 # Other Rpi configurations to make your GUI look more professional
