@@ -144,10 +144,22 @@ ping 10.0.4.83 -c 5
 If you can successfully ping you Rpi, connect as root user in ubuntu terminal. 
 ```
 sudo bash
-```
 apt-get install build-essential
 apt-get install gcc git bison python gperf pkg-config
 apt install libclang-dev
+```
+Create the following directory and give your ubuntu user permission.  In my case my user is *aaron*.  Change *aaron* to your ubuntu user.  Then go to the created directory.
+```
+mkdir /opt/qt5pi/
+chown aaron:aaron /opt/qt5pi
+cd /opt/qt5pi/
+```
+
+Download, open and install toolchain from linaro
+```
+wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
+
+tar xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 ```
 
 
