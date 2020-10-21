@@ -238,6 +238,7 @@ make install
 ```
 
 
+
 # Other Rpi configurations to make your GUI look more professional
 
 ## Make screen black on boot
