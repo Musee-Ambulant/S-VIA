@@ -237,7 +237,7 @@ make -j8
 make install
 ```
 
-
+ 
 
 # Other Rpi configurations to make your GUI look more professional
 
