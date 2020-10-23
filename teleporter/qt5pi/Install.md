@@ -1,4 +1,4 @@
-# Create custom interface for Raspberry pi 4 model B with Qt5
+# Create a GUI for Raspberry pi 4 model B with Qt5
 by Aaron Bass
 
 #### Based on the comprehensive youtube video titled : "Qt for Raspberry Pi - Qt 5.14.2 cross compilation for Raspberry Pi 4 model B - Run Qt on Raspberry" by [ Ulas Dikme ](https://www.youtube.com/channel/UCM93TMYG5-WE7tQ1UT-EJKw): https://youtu.be/TmtN3Rmx9Rk. I recommend watching the video while going through the following installation steps to better understand what is actually going on 😜.
@@ -40,10 +40,10 @@ Once your Rpi has booted, you will be greated with the installation welcome scre
 Open sources.list and uncomment the last line
 
 Uncomment the following:
-#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
+```#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $```
 
 to it looks like:
-deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $
+```deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free $```
 ```
 sudo nano /etc/apt/sources.list
 ```
