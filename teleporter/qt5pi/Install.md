@@ -237,7 +237,7 @@ Run the following configurations and commands.  The ( *make -j8* ) command will 
 make -j8
 make install
 ```
-
+## TO BE CONTINUNED...
  
 
 # Other Rpi configurations to make your GUI look more professional
